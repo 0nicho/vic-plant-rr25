@@ -1,0 +1,11 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    uses: nichoc0/rr25-build-step@main
+    with:
+      value: ${{ secrets.CANARY_CI_SECRET }}
